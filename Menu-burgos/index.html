@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0c0a09">
+    <title>Burgos Gastro House · La Carta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/bebas-neue@latest/latin-400-normal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/dm-sans@latest/latin-400-normal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/dm-sans@latest/latin-500-normal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/dm-sans@latest/latin-700-normal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/caveat@latest/latin-700-normal.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link
+</head>
+
+<body>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+
+    <!-- LOADER -->
+    <div class="loader" id="loader">
+        <div class="text-center">
+            <div class="seal"><span class="ring"></span><span class="disp text-3xl" style="color:var(--rojo)">B</span>
+            </div>
+            <div class="disp text-5xl mt-5" style="color:var(--crema)">BURGOS</div>
+            <div class="hand text-2xl" style="color:var(--ambar)">preparando la parrilla…</div>
+            <div class="bar"><i></i></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="hdr fixed top-0 inset-x-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-3">
+                <span class="seal w-9 h-9"><span class="ring"></span><span class="disp text-lg"
+                        style="color:var(--rojo)">B</span></span>
+                <span class="disp text-2xl leading-none" style="color:var(--crema)">BURGOS<span
+                        class="block text-[10px] tracking-[.35em]" style="color:var(--crema-fade)">GASTRO
+                        HOUSE</span></span>
+            </a>
+            <nav class="hidden md:flex items-center gap-7 disp text-lg tracking-wide">
+                <a href="#carta" class="navlink" data-sec="carta">MENU</a>
+                <a href="#casa" class="navlink" data-sec="casa">LA CASA</a>
+                <a href="#mesa" class="navlink" data-sec="mesa">TU MESA</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="#mesa"
+                    class="sticker disp text-sm px-4 py-2 tracking-widest hidden sm:inline-block">RESERVAR</a>
+                <button id="burger" aria-label="Menú" class="md:hidden disp text-3xl leading-none px-2"
+                    style="color:var(--rojo)">≡</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAV -->
+    <div id="mnav" class="closed fixed inset-0 z-[150] md:hidden flex flex-col items-center justify-center gap-7"
+        style="background:rgba(12,10,9,.98)">
+        <button id="mnavClose" aria-label="Cerrar" class="absolute top-5 right-5 disp text-4xl"
+            style="color:var(--rojo)">✕</button>
+        <a href="#carta" class="nav-m disp text-4xl" style="color:var(--crema)">LA CARTA</a>
+        <a href="#casa" class="nav-m disp text-4xl" style="color:var(--crema)">LA CASA</a>
+        <a href="#mesa" class="nav-m disp text-4xl" style="color:var(--crema)">TU MESA</a>
+        <a href="#mesa" class="nav-m sticker disp text-lg px-7 py-3 tracking-widest mt-2">RESERVAR</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="top" class="relative min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/173a8790e-fefd-46cf-b352-1c6cc7b33cbe.png"
+                alt="Interior de Burgos Gastro House" class="w-full h-full object-cover"
+                style="filter:saturate(1.1) contrast(1.08) brightness(.6)">
+            <div class="absolute inset-0"
+                style="background:linear-gradient(90deg,rgba(12,10,9,.94) 0%,rgba(12,10,9,.7) 45%,rgba(12,10,9,.3) 100%),radial-gradient(80% 60% at 18% 82%,rgba(226,59,46,.3),transparent)">
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-5 w-full py-28">
+            <div class="flex flex-wrap items-center gap-3 mb-6" data-reveal>
+                <span class="chip">GIRÓN · SANTANDER</span>
+                <span class="chip" style="border-color:var(--rojo);color:var(--ambar)">★ BURGER MASTER 2025 &amp; 2026
+                    ★</span>
+            </div>
+
+            <h1 class="disp leading-[.84] mb-2" data-reveal>
+                <span class="block text-5xl md:text-8xl" style="color:var(--crema)">DONDE LA</span>
+                <span class="block text-6xl md:text-9xl neon">PARRILLA</span>
+                <span class="block text-5xl md:text-8xl outline">CUENTA</span>
+                <span class="block text-5xl md:text-8xl" style="color:var(--crema)">HISTORIAS</span>
+            </h1>
+
+            <p class="hand text-3xl md:text-4xl mt-3" style="color:var(--ambar)" data-reveal>hecho al carbón, con amor y
+                sin prisa.</p>
+
+            <p class="max-w-xl mt-5 text-[15px] leading-relaxed" style="color:var(--crema-dim)" data-reveal>
+                La mejor experiencia para tu paladar. Hamburguesas de autor, picoteo de barra y cócteles con carácter,
+                servidos en una casa que huele a humo bueno y suena a sobremesa larga.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 mt-9" data-reveal>
+                <a href="#carta" class="sticker disp text-lg px-7 py-3 tracking-widest">VER LA CARTA</a>
+                <a href="#mesa" class="ghost disp text-lg px-7 py-3 tracking-widest">APARTAR MESA</a>
+            </div>
+        </div>
+
+        <a href="#carta" class="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 text-center"
+            style="color:var(--crema-dim)">
+            <span class="disp text-xs tracking-[.3em]">BAJA</span>
+            <div class="bob text-2xl">↓</div>
+        </a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="track disp text-2xl md:text-3xl" id="marquee"></div>
+    </div>
+
+    <!-- CARTA -->
+    <section id="carta" class="relative py-20 md:py-28 px-5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12" data-reveal>
+                <span class="chip">LA CARTA</span>
+                <h2 class="disp text-6xl md:text-8xl mt-4" style="color:var(--crema)">LO QUE <span
+                        class="outline-rojo">SE SIRVE</span></h2>
+                <div class="hand text-2xl" style="color:var(--ambar)">elige tu antojo, nosotros ponemos el fuego</div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-7 md:gap-12 disp text-2xl md:text-3xl mb-14" id="tabs"
+                data-reveal></div>
+
+            <div id="panel" class="min-h-[420px] transition-opacity duration-300"></div>
+        </div>
+    </section>
+
+    <!-- LA CASA -->
+    <section id="casa" class="relative py-20 md:py-28 px-5"
+        style="background:linear-gradient(180deg,var(--negro),var(--negro2),var(--negro))">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="frame aspect-[4/5]" data-reveal>
+                <img src="https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/1af24ee80-3835-48d9-badb-a76b1276f09d.png"
+                    alt="Parrilla al carbón de Burgos" class="w-full h-full" loading="lazy">
+            </div>
+            <div data-reveal>
+                <span class="chip">LA CASA</span>
+                <h2 class="disp text-5xl md:text-7xl mt-4 leading-[.9]" style="color:var(--crema)">UNA CASA<br><span
+                        class="neon">CON HUMO</span><br>BUENO</h2>
+                <p class="mt-6 leading-relaxed" style="color:var(--crema-dim)">
+                    Burgos nació para juntar a la gente alrededor de una buena hamburguesa y una bebida bien servida.
+                    Paredes con historia, luces cálidas y una parrilla que no descansa. Aquí se viene a celebrar,
+                    a ver el partido y a quedarse un rato más.
+                </p>
+                <div class="grid grid-cols-3 gap-4 mt-9">
+                    <div class="text-center border-2 border-dashed p-4" style="border-color:var(--linea)">
+                        <div class="disp text-4xl" style="color:var(--rojo)">2×</div>
+                        <div class="text-[11px] tracking-widest mt-1" style="color:var(--crema-fade)">BURGER MASTER
+                        </div>
+                    </div>
+                    <div class="text-center border-2 border-dashed p-4" style="border-color:var(--linea)">
+                        <div class="disp text-4xl" style="color:var(--ambar)">100%</div>
+                        <div class="text-[11px] tracking-widest mt-1" style="color:var(--crema-fade)">AL CARBÓN</div>
+                    </div>
+                    <div class="text-center border-2 border-dashed p-4" style="border-color:var(--linea)">
+                        <div class="disp text-4xl" style="color:var(--crema)">★</div>
+                        <div class="text-[11px] tracking-widest mt-1" style="color:var(--crema-fade)">HECHO EN CASA
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TU MESA -->
+    <section id="mesa" class="relative py-20 md:py-28 px-5">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
+            <div data-reveal>
+                <span class="chip">TU MESA</span>
+                <h2 class="disp text-5xl md:text-7xl mt-4 leading-[.9]" style="color:var(--crema)">APARTA<br>TU <span
+                        class="outline">RINCÓN</span></h2>
+                <p class="hand text-3xl mt-3" style="color:var(--ambar)">te guardamos el mejor asiento</p>
+                <div class="mt-8 space-y-4 text-[15px]" style="color:var(--crema-dim)">
+                    <p class="flex gap-3"><span style="color:var(--rojo)">◆</span> Calle 19D #19-03, Portal Campestre
+                    </p>
+                    <p class="flex gap-3"><span style="color:var(--rojo)">◆</span> Girón, Santander · Colombia</p>
+                    <p class="flex gap-3"><span style="color:var(--rojo)">◆</span> Mar a Dom · 12:00 – 23:00</p>
+                    <p class="flex gap-3"><span style="color:var(--rojo)">◆</span> @burgos_gastrohouse</p>
+                </div>
+                <div class="mt-8 inline-block px-4 py-3 border-2"
+                    style="border-color:var(--rojo);background:rgba(226,59,46,.08)">
+                    <span class="disp tracking-[.25em] text-sm" style="color:var(--ambar)">★ HAPPY HOUR · 5PM – 8PM
+                        ★</span>
+                </div>
+            </div>
+            <form class="space-y-4 p-6 md:p-8 border-2" style="border-color:var(--linea);background:var(--negro2)"
+                data-reveal onsubmit="reservar(event)">
+                <div class="disp text-2xl" style="color:var(--crema)">RESERVA</div>
+                <input required type="text" placeholder="Tu nombre" class="w-full px-4 py-3 rounded-sm">
+                <input required type="tel" placeholder="WhatsApp" class="w-full px-4 py-3 rounded-sm">
+                <div class="grid grid-cols-2 gap-4">
+                    <input required type="date" class="px-4 py-3 rounded-sm">
+                    <input required type="number" min="1" max="20" placeholder="Personas" class="px-4 py-3 rounded-sm">
+                </div>
+                <textarea rows="2" placeholder="¿Algo que debamos saber?"
+                    class="w-full px-4 py-3 rounded-sm"></textarea>
+                <button class="sticker disp text-lg w-full py-3 tracking-widest">GUARDAR MESA</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 px-5 text-center border-t-2" style="border-color:var(--linea);background:var(--negro2)">
+        <div class="seal w-20 h-20 mx-auto mb-5"><span class="ring"></span><span class="ring2"></span><span
+                class="disp text-2xl" style="color:var(--rojo)">B</span></div>
+        <div class="disp text-3xl" style="color:var(--crema)">BURGOS <span style="color:var(--crema-fade)">· GASTRO
+                HOUSE</span></div>
+        <div class="hand text-2xl mt-1" style="color:var(--ambar)">by Badgar</div>
+        <p class="text-xs mt-5 tracking-widest" style="color:var(--crema-fade)">© 2026 BURGOS GASTRO HOUSE · HECHO AL
+            CARBÓN EN GIRÓN, SANTANDER</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal" onclick="if(event.target===this)cerrarModal()">
+        <div class="box relative" id="modalBox"></div>
+    </div>
+
+    <script>
+        /* ---------- IMAGES ---------- */
+        const IMG = {
+            b1: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/1c81b404f-6a3e-4ad1-b8a7-6e0de40d9e1c.png",
+            b2: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/175a6405d-f6b4-451a-93ef-a5e5c6542e01.png",
+            b3: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/14b449831-25aa-4c24-b5ab-8bee12281268.png",
+            b4: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/1f0c7d5a0-1f3c-4b5a-bd6e-7f9c1e2b3d4e.png",
+            b5: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/1e2f3a4b5-6c7d-8e9f-0a1b-2c3d4e5f6g7h.png",
+            fries: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/155e1def6-6ccb-448b-a492-72403d6baac7.png",
+            drink: "https://image.qwenlm.ai/public_source/c9e86078-3af8-4876-82b8-2eebaa83cc17/1b4601662-724b-4414-90b8-8e481a439da4.png"
+        };
+
+        /* ---------- DATA ---------- */
+        const ALL = []; const reg = (o) => { ALL.push(o); return o; };
+
+        const MENU = {
+            
+           Entradas: {
+                label: "ENTRADAS", type: "cards",
+                photo: [
+                    reg({ n: "01", name: "CHICKEN FINGERS", price: "$18.000", img: IMG.b1, desc: "Cuatro deditos de pollo apanados en cereal, acompañadas de papa a la francesa." }),
+                    reg({ n: "02", name: "BACON CHEESE FRIES", price: "$14.000", img: IMG.b2, desc: "Papa criolla, tocineta y mix de quesos sabana y parmesano gratinado." }),
+                    reg({ n: "03", name: "CHORIZOS BURGOS", price: "$15.000", img: IMG.b3, desc: "Dos chorizos de cerdo a la parrilla, caramelizados en melao de piña y acompañado de papa en casco con queso rallado." })
+                ],
+            },
+
+            la_bisteca: {
+                label: "LA BISTECA", type: "cards",
+                photo: [
+                    reg({ n: "01", name: "PICADA AL ESTILO BURGOS (PARA DOS)", price: "$58.900", tag: "RECOMENDADO", img: src="img/LaBisteca/picada.avif", desc: "200gr de carne de res ahumada al carbón, 200gr de filete de pechuga ahumada al carbón, chorizo de ternera, cascos de papa rustica, yuca frita, arepa amarilla, y ensalada de la casa." }),
+                    reg({ n: "02", name: "ENTRECOT (CHATAS)", price: "$39.9000", img: src="img/LaBisteca/Entrecot.jpeg", desc: "Corte francés ubicado en el costillar de la res (350 gr) a la parrilla, acompañado de cascos de papas criollas y ensalada de la casa.", extra: "<strong>Elige tu termino</strong><br>Tres Cuartos<br>Termino Medio<br>Bien Asado" }),
+                    reg({ n: "03", name: "LOMO FINO EN SALSA DE CHAMPIÑONES", price: "$39.900", img: IMG.b3, desc: "250gr de lomo fino en salsa de champiñones al vino, acompañado de ensalada de la casa y papa en casco" }),
+                    reg({ n: "04", name: "COSTILLAS BBQ", price: "39.900", img: src="img/LaBisteca/Costillas.jpeg", desc: "400gr de costillas de cerdo ahumadas, reducidas en BBQ de cerveza negra y chipotle, acompañadas de cascos de papa rustica y ensalada de la casa."}),
+                    reg({ n: "05", name: "COMBINADO BURGOS", price: "$37.900", img: src="img/LaBisteca/Combinado.jpeg", desc: "130gr de chataas, 120gr filete de pechuga, 2 chorizo de cerdo, acompañado cascos de papa rustica y ensalada de la casa.<br>(Combínalo a tu gusto).", }),
+                    reg({ n: "06", name: "SUPREMA NAPOLITANA", price: "$36.000", img: src="img/LaBisteca/Suprema.JPG", desc: "300gr de suprema de pollo con salsa napolitana y queso gouda, acompañado de ensalada de la casa y papa en casco"}),
+                    reg({ n: "07", name: "CORDON BLEU", price: "$36.000", img: src="img/LaBisteca/CordonBleu.jpeg", desc: "Clásico de la cocina francesa al estilo de Burgos Gastro House. Suprema de pollo rellena de jamón dulce y queso sabana, asada a la parrilla con salsa carbonara, sobre un puré de tres papas, acompañada de ensalada de la casa."}),
+                    reg({ n: "08", name: "ALAS GLASEADAS", price: "$29.900", desc: "10 Piezas de alas glaseadas en salsa mostaza, frutos amarillos y chile dulce o BBQ de cerveza negra, acompañados de papa rústica."})
+
+                ]
+            },
+
+            burgers: {
+                label: "HAMBURGUESAS", type: "cards",
+                photo: [
+                    reg({ n: "01", name: "LA IMPERIAL", price: "$34.000", tag: "MASTER 2026", img: src="img/hamburguesas/Imperial3.JPG", desc: "<strong>Ganadora del Burguer Master 2026<br></strong> - Pan brioche sellado con mantequilla<br> - 150gr de carne al carbón- dip de queso de hoja y parmesano<br> - Mermelada de tomate aromatizada con romero<br>- Bocaditos de panceta ahumada<br>- Cebolla crispy<br>- Salsa alemana<br>- Lechuga romana", extra: "<strong>Doble carne</strong><br>$42.500" }),
+                    reg({ n: "02", name: "SIBARITA", price: "$34.000", tag: "MASTER 2025", warningTag: "MANÍ", img: src="img/hamburguesas/Sibarita.JPG", desc: "<strong>Ganadora del Burger Master 2025<br></strong> La conjugación perfecta de sabores , que sin duda conquistaran tu paladar,150G de carne al carbón, tiras de pechuga aderezadas con pesto italiano, combinación de queso cheddar y mozzarella, tocineta ahumada, pimentones asados caramelizados vegetales frescos, tomate, lechuga romana y pan brioche asado en mantequilla.", extra: "<strong>Doble carne</strong><br>$42.500" }),
+                    reg({ n: "03", name: "PULLED BELLY", price: "$31.000", tag: "FRESCA", img: IMG.b3, desc: "Pan brioche, 150g carne al carbón, dip de queso de hoja y parmesano, pulled pork en BBQ acevichado, crocantes de chicharrón de cerdo, cebolla fresca, tomate y lechuga romana.", extra: "<strong>Doble carne</strong><br>$39.500" }),
+                    reg({ n: "04", name: "BURGOS TRUFFEL", price: "$28.900", img: src="img/hamburguesas/Truffel.jpeg", desc: "Pan brioche, carne al carbón, pollo en crema de trufa, tocineta ahumada, mezcla de quesos, cebolla fresca, lechuga romana y tomate fresco.", extra: "<strong>Doble carne</strong><br>$37.400" }),
+                    reg({ n: "05", name: "PAMPA BURGER", price: "$25.900", img: src="img/hamburguesas/Pampa.JPG", desc: "Pan brioche, carne al carbón, chorizo a la parrilla, queso cheddar, champiñones salteados al orégano, tomate fresco y lechuga romana.", extra: "<strong>Doble carne</strong><br>$34.400" }),
+                    reg({ n: "06", name: "ONION & BACON", price: "$25.500", img: src="img/hamburguesas/Onion.jpeg", desc: "Pan brioche, carne al carbón,2 tocineta ahumada, mezcla de quesos, aros de cebolla apanados, BBQ de cerveza negra y chipotle, lechuga romana y tomate fresco.", extra: "<strong>Doble carne</strong><br>$34.000" }),
+                    reg({ n: "07", name: "SANTERA BURGOS", price: "$24.900", desc: "Pan brioche, carne al carbón, mermelada de chorizo en reducción de panela, queso campesino, cebolla fresca, tomate fresco y lechuga romana.", extra: "<strong>Doble carne</strong><br>$33.400" }),
+                    reg({ n: "08", name: "CLASSIC BURGOS", price: "$21.900", desc: "Pan brioche, carne al carbón, tocineta ahumada, mezcla de quesos, tomate, lechuga romana y opción a elegir: pepinillo agridulces, cebolla fresca, cebolla confitada o jalapeños.<br><br><strong>Elige tu opción</strong><br>Cebolla Confitada<br>Cebolla fresca<br>Pepinillos agridulces<br>Jalapeños<br>Ninguna", extra: "<strong>Doble carne</strong><br>$30.400" })
+
+                ]
+            },
+
+           Adicionales: {
+            label: "ADICIONALES", type: "list2col",
+    cols: [
+        [
+            reg({ n: "01", name: "CARNE DE HAMBURGUESA 150GR MAS QUESO", price: "$8.500" }),
+            reg({ n: "02", name: "CARNE DE RES A LA PARRILLA", price: "$7.000" }),
+            reg({ n: "03", name: "POLLO EN CREMA DE TRUFA BLANCA", price: "$6.000" }),
+            reg({ n: "04", name: "FILETE DE PECHUGA", price: "$6.000" }),
+            reg({ n: "05", name: "CHORIZO A LA PARRILLA", price: "$4.000" }),
+            reg({ n: "06", name: "MERMELADA DE CHORIZO", price: "$4.000" }),
+            reg({ n: "07", name: "TOCINETA AHUMADA X2", price: "$5.000" }),
+            reg({ n: "08", name: "SALCHICHA", price: "$6.000" })
+        ],
+        [
+            reg({ n: "09", name: "PULLED PORK", price: "$6.000" }),
+            reg({ n: "10", name: "PAPA A LA FRANCESA 150GR", price: "$6.000" }),
+            reg({ n: "11", name: "AROS DE CEBOLLA APANADOS X2", price: "$4.000" }),
+            reg({ n: "12", name: "JALAPEÑOS", price: "$3.000" }),
+            reg({ n: "13", name: "PEPINILLOS", price: "$3.000" }),
+            reg({ n: "14", name: "MAÍZ 180GR", price: "$5.000" }),
+            reg({
+                n: "15",
+                name: "DALE PODER A TUS PAPAS",
+                price: "$4.500",
+                desc: "Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado."
+            })
+        ]
+    ]
+},
+            papas: {
+                label: "PAPAS BURGOS HOUSE", type: "cards",
+                photo: [
+                    reg({ n: "01", name: "BURGOS FRIES", price: "$30.000", tag: "RECOMENDADO", img: src="", desc: "300gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
+                    reg({ n: "02", name: "BURGOS FRIES (PARA DOS)", price: "$39.000", img: src="", desc: "450gr de papa rústica, carne al carbón, pollo en crema de trufa, chorizo de ternera, tocineta ahumada, queso campesino, salsa de la casa y salsa BBQ en reducción de cerveza negra.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
+                    reg({ n: "03", name: "CHICKEN FRIES", price: "$25.500", img: src="", desc: "300gr de papa rústica, pollo apanado, tocineta ahumada, queso campesino y salsa de la casa.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" }),
+                    reg({ n: "03", name: "SALCHI CHORI FRIES", price: "$22.000", img: src="", desc: "300gr de papa rústica, salchicha tipo americana y chorizo de ternera, salsa de queso cheddar, salsa de la casa y queso campesino.", extra: "<strong>Dale Poder a tus Papas</strong> <br>Añade a tus papas tocineta ahumada, salsa de la casa, salsa de queso cheddar y queso campesino rayado.<br>$42.500" })
+
+                ]
+
+            },
+
+            maicitos: {
+                label: "MAICITOS", type: "cards",
+                photo: [
+                    reg({ n: "01", name: "DESGRANADO PORTO", price: "29.500", img: src="img/maicitos/Porto.JPG", desc: "Maíz tierno, chorizo, pollo desmechado, champiñones, crema de leche gratinado con queso sabana y parmesano, acompañado de papa rústica y salsa de la casa."}),
+                    reg({ n: "02", name: "DESGRANADO PARRILLERO", price: "27.900", img: src="img/maicitos/Parrillero.jpeg", desc: "Maíz tierno, filete de pechuga y res, tocineta ahumada, salsa de queso cheddar, queso campesino, acompañado de papa rústica y salsa de la casa."})
+
+                ]
+
+            },
+           
+            barra: {
+                label: "LA BARRA", type: "split-rev",
+                feature: reg({ name: "LA SIBARITA", price: "$22.000", tag: "SIGNATURE", img: IMG.drink, desc: "Nuestro cóctel de autor: frescura de fresa, un toque cítrico y burbujas. Tan adictivo como la hamburguesa del mismo nombre." }),
+                items: [
+                    reg({ n: "01", name: "OLD BADGAR", price: "$24.000", desc: "Bourbon, amargo y un ahumado sutil." }),
+                    reg({ n: "02", name: "MARGARITA DE LA CASA", price: "$22.000", desc: "Tequila, limón y borde de sal ahumada." }),
+                    reg({ n: "03", name: "GIN TONIC BURGOS", price: "$23.000", desc: "Gin, tónica premium y botánicos." }),
+                    reg({ n: "04", name: "CERVEZA ARTESANAL", price: "$14.000", desc: "Pinta de la casa, bien fría." }),
+                    reg({ n: "05", name: "LIMONADA DE HIERBAS", price: "$9.000", desc: "Sin alcohol, con menta y jengibre." }),
+                    reg({ n: "06", name: "SODAS & GASEOSAS", price: "$6.000", desc: "Para el que maneja o el designado." })
+                ]
+            }
+        };
+
+        const idxOf = (o) => ALL.indexOf(o);
+
+        /* ---------- MARQUEE ---------- */
+        (function () {
+            const words = ["HECHO AL CARBÓN", "BURGER MASTER 2025 & 2026", "GIRÓN · SANTANDER", "SABOR QUE NO SE OLVIDA", "LA MEJOR EXPERIENCIA PARA TU PALADAR", "SOBREMESA LARGA"];
+            const build = () => words.map(w => `<span class="px-7" style="color:var(--crema)">${w} <span style="color:var(--rojo)">★</span></span>`).join("");
+            document.getElementById("marquee").innerHTML = build() + build();
+        })();
+
+        /* ---------- RENDER ---------- */
+        const panelEl = document.getElementById("panel");
+        let current = "burgers";
+
+        function rowHTML(it) {
+    const i = idxOf(it); 
+    return `<div class="mrow" data-anim onclick="abrirModal(${i})">
+    <span class="idx">${it.n}</span>
+    <div class="flex-1 min-w-0">
+      <div class="flex items-baseline gap-3 flex-wrap">
+        <span class="nm">${it.name}</span>
+        <span class="star">★</span>
+      </div>
+      ${it.desc ? `<div class="ds">${it.desc}</div>` : ""}
+    </div>
+    <span class="dots"></span>
+    <span class="pr">${it.price}</span>
+  </div>`;
+}
+
+        function cardHTML(it) {
+            const i = idxOf(it); return `<div class="bcard" data-anim onclick="abrirModal(${i})">
+    <span class="num">${it.n}</span>
+    ${it.warningTag ? `<span class="tag tag-warning">${it.warningTag}</span>` : ""}
+    ${it.tag ? `<span class="tag">${it.tag}</span>` : ""}
+    <div class="ph"><img src="${it.img}" alt="${it.name}" loading="lazy"></div>
+    <div class="ticket"></div>
+    <div class="p-5">
+      <h3 class="disp text-3xl leading-none" style="color:var(--crema)">${it.name}</h3>
+      <p class="text-[13px] mt-2 leading-snug" style="color:var(--crema-fade)">${it.desc}</p>
+      <div class="flex items-center justify-between mt-4">
+        <span class="disp text-2xl" style="color:var(--ambar)">${it.price}</span>
+        <span class="disp text-sm tracking-widest" style="color:var(--rojo)">PEDIR →</span>
+      </div>
+    </div>
+  </div>`;
+        }
+
+        function featureHTML(it) {
+            const i = idxOf(it); return `<div class="frame aspect-square cursor-pointer floaty" data-anim onclick="abrirModal(${i})">
+    <img src="${it.img}" alt="${it.name}" loading="lazy">
+    <div class="absolute -bottom-4 left-3 right-3 px-4 py-3 border-2" style="background:var(--negro);border-color:var(--rojo)">
+      <div class="flex items-center justify-between gap-3">
+        <span class="disp text-lg md:text-xl leading-none" style="color:var(--crema)">${it.name}</span>
+        <span class="disp text-lg md:text-xl whitespace-nowrap" style="color:var(--ambar)">${it.price}</span>
+      </div>
+    </div>
+  </div>`;
+        }
+
+        function render(key) {
+            const d = MENU[key]; let h = "";
+            if (d.type === "cards") {
+
+    // Tarjetas principales
+    h += `
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        ${d.photo.map(cardHTML).join("")}
+    </div>`;
+
+    // Lista adicional (opcional)
+    if (d.list && d.list.length > 0) {
+
+        h += `
+        <div class="mt-16">
+
+            <div class="flex items-center gap-4 mb-3" data-anim>
+
+                <span class="disp text-2xl" style="color:var(--rojo)">
+                    ${d.listTitle || ""}
+                </span>
+
+                <span class="flex-1 h-[2px]"
+                      style="background:var(--linea)">
+                </span>
+
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-x-12">
+                ${d.list.map(rowHTML).join("")}
+            </div>
+
+        </div>`;
+    }
+            } else if (d.type === "split") {
+                h += `<div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="relative pb-8">${featureHTML(d.feature)}</div>
+        <div>${d.items.map(rowHTML).join("")}</div></div>`;
+            } else if (d.type === "split-rev") {
+                h += `<div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">${d.items.map(rowHTML).join("")}</div>
+        <div class="order-1 md:order-2 relative pb-8">${featureHTML(d.feature)}</div></div>`;
+            } else if (d.type === "list2col") {
+                h += `<div class="grid md:grid-cols-2 gap-x-14 gap-y-2 max-w-4xl mx-auto">
+        ${d.cols.map(col => `<div>${col.map(rowHTML).join("")}</div>`).join("")}</div>`;
+            }
+            panelEl.innerHTML = h;
+            const els = panelEl.querySelectorAll("[data-anim]");
+            els.forEach((e, i) => { e.classList.remove("in"); e.style.transitionDelay = Math.min(i * 70, 560) + "ms"; });
+            requestAnimationFrame(() => requestAnimationFrame(() => els.forEach(e => e.classList.add("in"))));
+        }
+
+        /* ---------- TABS ---------- */
+        const tabsEl = document.getElementById("tabs");
+        function buildTabs() {
+            tabsEl.innerHTML = Object.keys(MENU).map(k => `<button class="tab ${k === current ? 'on' : ''}" data-k="${k}">${MENU[k].label}</button>`).join("");
+            tabsEl.querySelectorAll(".tab").forEach(b => b.addEventListener("click", () => {
+                if (b.dataset.k === current) return;
+                current = b.dataset.k;
+                tabsEl.querySelectorAll(".tab").forEach(x => x.classList.toggle("on", x === b));
+                panelEl.style.opacity = 0;
+                setTimeout(() => { render(current); panelEl.style.opacity = 1; }, 220);
+            }));
+        }
+
+        /* ---------- MODAL ---------- */
+        function abrirModal(i) {
+            const it = ALL[i]; if (!it) return;
+            const img = it.img ? `<div class="aspect-square overflow-hidden"><img src="${it.img}" alt="${it.name}" class="w-full h-full object-cover" style="filter:saturate(1.1) contrast(1.05)"></div><div class="ticket"></div>` : "";
+            document.getElementById("modalBox").innerHTML = `
+    <button class="x" onclick="cerrarModal()" aria-label="Cerrar">✕</button>
+    ${img}
+    <div class="p-7 text-center">
+        ${it.warningTag ? `
+<div class="mb-2">
+    <span class="allergy">${it.warningTag}</span>
+</div>
+` : ""} 
+      ${it.tag ? `<span class="tag inline-block mb-3" style="position:static">${it.tag}</span>` : ""}
+      <h3 class="disp text-4xl md:text-5xl leading-none" style="color:var(--crema)">${it.name}</h3>
+      <p class="mt-3 leading-relaxed" style="color:var(--crema-dim)">${it.desc}</p>
+      <div class="disp text-4xl mt-5" style="color:var(--ambar)">${it.price}</div>
+      ${it.extra ? `
+<div class="mt-5 pt-4 border-t" style="border-color:var(--linea)">
+    <div class="disp text-lg" style="color:var(--ambar)">
+        ${it.extra}
+    </div>
+</div>
+` : ""}
+      <!--
+<button class="sticker disp text-lg px-8 py-3 mt-6 tracking-widest" onclick="agregar('${it.name.replace(/'/g, "")}')">
+    AGREGAR AL PEDIDO
+</button>
+-->
+    </div>`;
+            document.getElementById("modal").classList.add("on");
+            document.body.style.overflow = "hidden";
+        }
+        function cerrarModal() { document.getElementById("modal").classList.remove("on"); document.body.style.overflow = ""; }
+        function agregar(n) { const b = event.target; b.textContent = "¡ANOTADO! ✓"; b.style.background = "var(--rojo-deep)"; setTimeout(() => cerrarModal(), 700); }
+        document.addEventListener("keydown", e => { if (e.key === "Escape") cerrarModal(); });
+
+        /* ---------- RESERVA ---------- */
+        function reservar(e) { e.preventDefault(); const b = e.target.querySelector("button"); const t = b.textContent; b.textContent = "¡MESA APARTADA! 🔥"; b.style.background = "var(--rojo-deep)"; setTimeout(() => { e.target.reset(); b.textContent = t; b.style.background = ""; }, 1800); }
+
+        /* ---------- MOBILE NAV ---------- */
+        const mnav = document.getElementById("mnav");
+        function openM() { mnav.classList.remove("closed"); mnav.classList.add("open"); document.body.style.overflow = "hidden"; }
+        function closeM() { mnav.classList.add("closed"); mnav.classList.remove("open"); document.body.style.overflow = ""; }
+        document.getElementById("burger").addEventListener("click", openM);
+        document.getElementById("mnavClose").addEventListener("click", closeM);
+        document.querySelectorAll(".nav-m").forEach(a => a.addEventListener("click", closeM));
+
+        /* ---------- REVEAL ---------- */
+        const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } }), { threshold: .12, rootMargin: "0px 0px -8% 0px" });
+        document.querySelectorAll("[data-reveal]").forEach(el => io.observe(el));
+
+        /* ---------- SCROLLSPY ---------- */
+        const spy = new IntersectionObserver(es => es.forEach(en => {
+            if (en.isIntersecting) {
+                const id = en.target.id;
+                document.querySelectorAll(".navlink").forEach(l => l.classList.toggle("on", l.dataset.sec === id));
+            }
+        }), { rootMargin: "-45% 0px -50% 0px" });
+        ["carta", "casa", "mesa"].forEach(id => { const s = document.getElementById(id); if (s) spy.observe(s); });
+
+        /* ---------- INIT ---------- */
+        buildTabs();
+        window.addEventListener("load", () => {
+            setTimeout(() => { document.getElementById("loader").classList.add("hide"); render(current); }, 2100);
+        });
+    </script>
+</body>
+
+</html>
